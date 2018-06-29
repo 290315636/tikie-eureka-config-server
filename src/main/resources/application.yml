@@ -3,17 +3,29 @@ server:
 spring:
   application:
     name: config-server
+  #profiles:
+    #active: native   # 使用本地存储配置的方式
   cloud:
     config:
       server:
+        native:
+          #search-locations: file:C:/Users/zhaocs/eclipse-workspace/tikie-eureka-config-server/src/main/java/com/tikie/eureka/config/springcloud/
+          search-locations: classpath:/com/tikie/eureka/config/springcloud/
         git:
           uri: https://github.com/290315636/tikie-eureka-config-server.git     # 配置git仓库的地址
-          search-paths: /**/springcloud                          # git仓库地址下的相对地址，可以配置多个，用,分割。
-          username:                                              # git仓库的账号,公开项目不用写
-          password:                                              # git仓库的密码
+          search-paths: classpath:/com/tikie/eureka/config/springcloud/   # git仓库地址下的相对地址，可以配置多个，用,分割。
+          #username:                                                      # git仓库的账号,公开项目不用写
+          #password:                                                      # git仓库的密码
+        #加载svn环境
+        #svn:
+          #basedir:
+            #uri: http://localhost:8888/dmeo/development/trunk
+            #username: xxx
+            #password: xxx
           
-#Spring Cloud Config也提供本地存储配置的方式。
-#我们只需要设置属性spring.profiles.active=native，Config Server会默认从应用的src/main/resource目录下检索配置文件。
-#也可以通过spring.cloud.config.server.native.searchLocations=file:E:/properties/属性来指定配置文件的位置
 
-#可以把配置中心放到注册中心项目上
+# 可以把配置中心放到注册中心项目上
+# svn 环境需要添加依赖
+# <groupId>org.tmatesoft.svnkit</groupId>
+# <artifactId>svnkit</artifactId>
+
