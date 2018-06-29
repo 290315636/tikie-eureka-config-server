@@ -13,7 +13,7 @@ spring:
           search-locations: classpath:/com/tikie/eureka/config/springcloud/
         git:
           uri: https://github.com/290315636/tikie-eureka-config-server.git     # 配置git仓库的地址
-          search-paths: classpath:/com/tikie/eureka/config/springcloud/   # git仓库地址下的相对地址，可以配置多个，用,分割。
+          search-paths: /**/springcloud/   # git仓库地址下的相对地址，可以配置多个，用,分割。
           #username:                                                      # git仓库的账号,公开项目不用写
           #password:                                                      # git仓库的密码
         #加载svn环境
@@ -25,6 +25,7 @@ spring:
           
 
 # 可以把配置中心放到注册中心项目上
+
 # svn 环境需要添加依赖
 # <groupId>org.tmatesoft.svnkit</groupId>
 # <artifactId>svnkit</artifactId>
