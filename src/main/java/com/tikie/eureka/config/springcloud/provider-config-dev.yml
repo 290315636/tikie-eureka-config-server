@@ -6,7 +6,7 @@ spring:
       enabled: ALWAYS   #控制台彩色输出
       
 server:
-  port: 8861
+  port: 8003
   
 eureka:
   client:
