@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eureka-provider
+  output:
+    ansi:
+      enabled: ALWAYS   #控制台彩色输出
+      
+server:
+  port: 8861
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/
