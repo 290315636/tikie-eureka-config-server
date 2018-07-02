@@ -30,3 +30,9 @@ spring:
 # <groupId>org.tmatesoft.svnkit</groupId>
 # <artifactId>svnkit</artifactId>
 
+# 配置中心服务化，注册到注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/   ## 注册中心eurka地址
+      

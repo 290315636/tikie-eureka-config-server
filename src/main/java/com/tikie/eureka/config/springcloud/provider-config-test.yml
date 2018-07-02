@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-provider
+    name: eureka-consumer
   output:
     ansi:
       enabled: ALWAYS   #控制台彩色输出

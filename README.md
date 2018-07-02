@@ -44,7 +44,7 @@ spring cloud全家桶，各个组件整合使用之配置中心服务config-serv
         java -jar tikie-eureka-config-server-0.0.1-SNAPSHOT.jar.jar
  + 注册中心页面主节点：http://peer1:8761
  + 注册中心页面副节点：http://peer2:8761/
- + 需要根据启动的消费者修改application.yml配置（app-config）
+ + 可能需要修改provider-config-*.yml对应的值，在对应的客户端使用
 
  + *本项目的默认只提供dev分支的更新权限*
  
@@ -70,5 +70,6 @@ spring cloud全家桶，各个组件整合使用之配置中心服务config-serv
     注. 3、4可以选中其一,优先使用feign;5可以不用启动（使用时启动）
 ### 历史更新
 
+    1.0.2 配置中心服务化，注册到注册中心你
     1.0.1 更新说明文档
     1.0.0 初始化服务提供者
